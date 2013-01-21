@@ -100,6 +100,7 @@ namespace Zip
             bool recurse = true; 
             FastZip fz = new FastZip();
 
+            pgbProgress.Value = 0;
             pgbProgress.Maximum = selectedFolders.Count;
             try
             {
@@ -116,7 +117,6 @@ namespace Zip
                 System.Media.SystemSounds.Exclamation.Play();
                 MessageBox.Show("Error Occurred: " + exception);
             }
-            pgbProgress.Value = 0;
         }
 
         /*
